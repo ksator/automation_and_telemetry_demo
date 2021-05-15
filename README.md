@@ -97,10 +97,10 @@ gnmic version
 
 Then clone this repository
 ```
-git clone https://github.com/ksator/automation_and_telemetry_workshop.git
+git clone https://github.com/ksator/automation_and_telemetry_demo.git
 ```
 ```
-cd automation_and_telemetry_workshop
+cd automation_and_telemetry_demo
 ```
 
 ## Configure EOS devices
