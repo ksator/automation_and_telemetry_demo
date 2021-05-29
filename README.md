@@ -97,10 +97,10 @@ gnmic version
 
 Then clone this repository
 ```
-git clone https://github.com/ksator/automation_and_telemetry_workshop.git
+git clone https://github.com/ksator/automation_and_telemetry_demo.git
 ```
 ```
-cd automation_and_telemetry_workshop
+cd automation_and_telemetry_demo
 ```
 
 ## Configure EOS devices
@@ -405,6 +405,11 @@ gnmic -a 10.73.1.107:6030 -u arista -p arista --insecure sub --path '/network-in
 gnmic -a 10.73.1.107:6030 -u arista -p arista --insecure sub --path '/network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor[neighbor-address=::133:0:0:2]/state'
 gnmic -a 10.73.1.107:6030 -u arista -p arista --insecure sub --path '/network-instances/network-instance[name=default]/protocols/protocol/bgp/neighbors/neighbor[neighbor-address=172.31.255.8]/state'
 gnmic -a 10.73.1.107:6030 -u arista -p arista --insecure sub --path '/network-instances/network-instance[name=Tenant_B_WAN_Zone]/protocols/protocol[identifier=BGP][name=BGP]/bgp/neighbors/neighbor[neighbor-address=10.255.254.5]/state'
+```
+```
+more gnmic_conf.yml
+gnmic --config gnmic_conf.yml sub --path '/network-instances/network-instance/protocols/protocol/bgp/'
+more gnmi_output.txt
 ```
 ```
 gnmic -a 10.73.1.107:6030 -u arista -p arista --insecure sub --stream-mode "sample" --sample-interval "5s" --path '/network-instances/network-instance[name=default]/protocols/protocol/bgp/neighbors/neighbor[neighbor-address=172.31.255.8]/state'
